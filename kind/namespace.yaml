@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: myapp
+  labels:
+    # inject Kuma sidecar into every Pod in that Namespace,
+    # unless a user explicitly opts out on per-Pod basis
+    kuma.io/sidecar-injection: enabled
